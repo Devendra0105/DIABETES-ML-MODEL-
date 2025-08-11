@@ -11,7 +11,7 @@ X=data[['Glucose','BloodPressure','BMI','DiabetesPedigreeFunction','Age']]
 y=data['Outcome']
 
 #train model and fit features inside model 
-X_train,X_test,Y_train,Y_test=train_test_split(X,y, test_size=0.2, random_state=42)
+X_train,X_test,Y_train,Y_test=train_test_split(X,y, test_size=0.5, random_state=40)
 model=RandomForestClassifier()
 model.fit(X_train,Y_train)
  
@@ -46,6 +46,7 @@ if probability==1:
     print(f'Likely to have diabetes, with a probability of {probability_percentage*100:.2f} %')
 else:
     print(f'Likely not to have diabetes with a probability of {probability_percentage*100:.2f} %')
+
 
 
 
